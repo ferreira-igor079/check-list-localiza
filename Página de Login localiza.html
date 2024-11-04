@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- saved from url=(0105)file:///C:/Users/ferre/OneDrive/Documentos/GitHub/ferreira-igor079/index.html/Projeto-Localiza/index.html -->
+<html lang="pt-BR"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="./Página de Login localiza_files/style.css">
+
+</head>
+<body>
+    
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="matricula" placeholder="Matrícula" required="">
+            <input type="password" id="senha" placeholder="Senha" required="">
+            <button type="submit">Entrar</button>
+            <p id="message" class="error-message"></p>
+        </form>
+    </div>
+    <script>
+        // Simulação de credenciais válidas
+        const validMatricula = "123456";
+        const validSenha = "senha123";
+
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Evita o comportamento padrão de recarregar a página
+
+            const matricula = document.getElementById("matricula").value;
+            const senha = document.getElementById("senha").value;
+            const message = document.getElementById("message");
+
+            // Limpar mensagem de erro anterior
+            message.textContent = "";
+
+            // Verificação de login
+            if (matricula === validMatricula && senha === validSenha) {
+                window.location.href = "file:///C:/Users/ferre/OneDrive/Documentos/recebimento%20localiza.html"; // Redireciona para a página secreta
+            } else {
+                message.textContent = "Matrícula ou senha incorretos.";
+            }
+        });
+    </script>
+
+
+
+
+    
+
+   </body></html>
